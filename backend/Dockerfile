@@ -113,6 +113,5 @@ COPY ./assets /app/assets
 
 ENV PYTHONPATH=/app
 
-# Default command which does nothing
-# This container is used by api server and background which specify their own CMD
-CMD ["tail", "-f", "/dev/null"]
+EXPOSE 8000
+CMD ["uvicorn", "backend.onyx.main:app", "--host", "0.0.0.0", "--port", "$PORT"]

@@ -244,7 +244,7 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
         logger.notice("Generative AI Q&A disabled")
 
     # fill up Postgres connection pools
-    await warm_up_connections()
+    # await warm_up_connections()
 
     if not MULTI_TENANT:
         # We cache this at the beginning so there is no delay in the first telemetry
