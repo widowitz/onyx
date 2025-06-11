@@ -485,3 +485,4 @@ if __name__ == "__main__":
         logger.notice("Running Enterprise Edition")
 
     uvicorn.run(app, host=APP_HOST, port=APP_PORT)
+
